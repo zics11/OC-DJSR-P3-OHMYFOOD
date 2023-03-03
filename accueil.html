@@ -9,7 +9,7 @@
     <link href="css/accueil.css" rel="stylesheet" >
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700;900&family=Shrikhand&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b2206325c8.js" crossorigin="anonymous"></script>
 </head>
 
@@ -29,28 +29,28 @@
         <section class="explore">
             <h2 class="esplore__heading">Réservez le menu qui vous convient</h2>
             <p class="explore__byline">Découvrez les restaurants d'exception, sélectionnés par nos soins.</p>
-            <div class="explore__button">
+            <div class="explore__btn">
                 <p>Explorer nos restaurants</p>
             </div>
         </section>
 
-        <section class="list-fonctionnement">
-            <h2 class="list-fonctionnement__heading">Fonctionnement</h2>
-            <div class="button-fonctionnement">
-                <p class="button-fonctionnement__number">1</p>
-                <i class="button-fonctionnement__icon fa-solid fa-mobile-screen-button"></i>
-                <p class="button-fonctionnement__text">Choisissez un restaurant</p>
+        <section class="fonctionnement">
+            <h2 class="fonctionnement__heading">Fonctionnement</h2>
+            <div class="fonctionnement-btn">
+                <p class="fonctionnement-btn__number">1</p>
+                <i class="fonctionnement-btn__icon fa-solid fa-mobile-screen-button icon--hover"></i>
+                <p class="fonctionnement-btn__text">Choisissez un restaurant</p>
             </div>
-            <div class="button-fonctionnement">
-                <p class="button-fonctionnement__number">2</p>
-                <i class="button-fonctionnement__icon fa-solid fa-list-ul"></i>
-                <p class="button-fonctionnement__text">Composer votre menu</p>
+            <div class="fonctionnement-btn">
+                <p class="fonctionnement-btn__number">2</p>
+                <i class="fonctionnement-btn__icon fa-solid fa-list-ul icon--hover"></i>
+                <p class="fonctionnement-btn__text">Composer votre menu</p>
             </div>
-            <div class="button-fonctionnement">
-                <p class="button-fonctionnement__number">3</p>
-                <i class="button-fonctionnement__icon fa-solid fa-store"></i>
-                <p class="button-fonctionnement__text">Dégustez au restaurant</p>
-            </div>
+            <div class="fonctionnement-btn">
+                <p class="fonctionnement-btn__number">3</p>
+                <i class="fonctionnement-btn__icon fa-solid fa-store icon--hover"></i>
+                <p class="fonctionnement-btn__text">Dégustez au restaurant</p>
+            </div>  
         </section>
 
         <section class="list-restaurants">
@@ -63,8 +63,8 @@
                         <h3 class="column-description-card-restaurant__heading">La palette du goût</h3>
                         <p class="column-description-card-restaurant__byline">Ménilmontant</p>
                     </div>
-                    <div class="description-card-restaurant_heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="description-card-restaurant__heart">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </div>
@@ -76,8 +76,8 @@
                         <h3 class="column-description-card-restaurant__heading">La note enchantée</h3>
                         <p class="column-description-card-restaurant__byline">Charonne</p>
                     </div>
-                    <div class="description-card-restaurant_heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="description-card-restaurant__heart">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </div>
@@ -89,8 +89,8 @@
                         <h3 class="column-description-card-restaurant__heading">À la française</h3>
                         <p class="column-description-card-restaurant__byline">Cité rouge</p>
                     </div>
-                    <div class="description-card-restaurant_heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="description-card-restaurant__heart">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </div>
@@ -102,8 +102,8 @@
                         <h3 class="column-description-card-restaurant__heading">Le délice des sens</h3>
                         <p class="column-description-card-restaurant__byline">Folie-Méricourt</p>
                     </div>
-                    <div class="description-card-restaurant_heart">
-                        <i class="fa-solid fa-heart"></i>
+                    <div class="description-card-restaurant__heart">
+                        <i class="fa-regular fa-heart"></i>
                     </div>
                 </div>
             </div>
@@ -112,19 +112,13 @@
 
     </main>
 
-    <footer class="footer">
-
-        <div class="menu-footer">
-            <img class="menu-footer_logo" src="./images/logo/ohmyfood@2x.svg" alt="Logo Ohmyfood blanc">
-            <ul>
-                <li class="menu-footer__link"><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
-                <li class="menu-footer__link"><a href="#"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a></li>
-                <li class="menu-footer__link"><a href="#">Mentions légales</a></li>
-                <li class="menu-footer__link"><a href="#">Contact</a></li>
-            </ul>
-        </div>
-
-    </footer>
+    <footer class="footer">       
+            <h2 class="footer__logo">ohmyfood</h2>
+            <a href="#" class="footer__lien"><i class="fa-solid fa-utensils " ></i> Proposer un restaurant</a>
+            <a href="#" class="footer__lien"><i class="fa-solid fa-handshake-angle"></i> Devenir partenaire</a>
+            <a href="#" class="footer__lien">Mentions légales</a>
+            <a href="#" class="footer__lien">Contact</a>
+        </footer>
 
 </body>
 
