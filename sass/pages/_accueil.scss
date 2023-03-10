@@ -1,3 +1,11 @@
+.container {
+    @include desktop-only {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+
 .place{
     display: flex;
     background-color: $colour-place-bg;
@@ -15,26 +23,65 @@
         font-family: "roboto";
         font-size: 1.3em;
     }
+    @include desktop-only {
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 40px;
+        border-radius: 15px;
+    }
+
 }
 
 .explore{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     background-color: $colour-explore-bg;
     text-align: center;
     padding-top: 40px;
     padding-bottom: 60px;
+    &__heading{
+        width: 95%;
+    }
 
     &__byline{
         font-size: 1.3em;
         font-weight: 200;
         margin-top: 10px;
         margin-bottom: 40px;
+        width: 95%;
     }
     &__btn{
         @include btn;
     }
+    @include desktop-only {
+        flex-direction: row;
+        text-align: left;
+        padding-bottom: 40px;
+        max-width: 1440px;
+        margin: auto;
+        margin-top: 40px;
+        border-radius: 15px;
+
+        &__heading{
+            text-align: left;
+            width: 100%;
+            margin-left: 20px;
+        }
+        &__byline{
+            width: 50%;
+            margin-bottom: 0px;
+            margin-left: 20px;
+        }
+        &__btn{
+            position: relative;
+            left: 120px;
+            bottom: 20px;
+        }
+    
+        }
+
 }
 
 .fonctionnement{
@@ -44,15 +91,33 @@
     flex-direction: column;
     padding-left: 28px;
     gap: 25px;
+    flex-wrap: wrap;
     &__heading{
         margin-left: -12px;
     }
+    @include tablet-only {
+        flex-direction: row;
+        &__heading{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @include desktop-only {
+        max-width: 1440px;
+        justify-content: center;
+        padding-left: 0px;
+        &__heading{
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+
 }
 
 .fonctionnement-btn{
     display: flex;
     background-color: $colour-explore-bg;
-    width: 100%;
+    width: 94%;
     height: 80px;
     align-items: center;
     @include btn-shadow();
@@ -74,6 +139,12 @@
             color: $colour-primary;
         }
     }
+    @include tablet-only {
+        width: 30%;
+    }
+    @include desktop-only {
+        width: 31%;
+    }   
 }
 
 .number {
@@ -83,17 +154,48 @@
 .list-restaurants{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     background-color: $colour-explore-bg;
-    gap: 25px;
+    flex-wrap: wrap;
+    &__heading{
+        margin-bottom: 20px;
+    }
+    @include tablet-only {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        &__heading{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    @include desktop-only {
+        flex-direction: row;
+        justify-content: space-evenly;
+        max-width: 1440px;
+        border-radius: 15px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        &__heading{
+            width: 100%;
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+
 }
 
 .card-restaurants{
-    width: 100%;
+    width: 89%;
     background-color: white;
     border-radius: 15px;
     @include btn-shadow();
+    margin-bottom: 20px;
+    position: relative;
     &__img{
         width: 100%;
         border-radius: 15px 15px 0px 0px;
@@ -103,7 +205,21 @@
     }
     &__new{
         display: none;
+        position: relative;
+        top: 50px;
+        &--display:before{
+            content: "Nouveau";
+            display: block;
+        }
     }
+    @include tablet-only {
+        width: 45%;
+    }
+    @include desktop-only {
+        width: 22%;
+    }
+
+
 }
 
 .description-card-restaurant{
@@ -116,3 +232,18 @@
     }
 }
 
+.new:after{
+    content: "Nouveau";
+    color: darken($color: $colour-tetiary, $amount: 40%);
+    font-weight: bold;
+    width: 90px;
+    height: 30px;
+    background-color: $colour-tetiary;
+    top: 15px;
+    right: 15px;
+    z-index: 99;
+    position:absolute ;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 2px;
+}

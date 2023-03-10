@@ -7,15 +7,47 @@
     box-shadow: 0px 3px 5px $colour-ombre;
     position: relative;
     &__logo{
-        width: 200px;
-    }
-    &-menu{
-        box-shadow: 0px 0px 0px $colour-ombre;
-        & div{
-            width: 22px;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        max-width: 1440px;
+        margin: auto;
+        & img{
+            width: 200px;
+        }
+        &--menu{
+            justify-content: space-between;
+            & i{
+                margin-left: 20px;
+            }
+            & div{
+                width: 22px;
+                margin-right: 20px;
+            }
+        @include desktop-only {
+            & i{
+                display: none;        
+            }
+        }
+            
         }
     }
+    &--menu{
+        box-shadow: 0px 0px 0px $colour-ombre;
+        
+    }
+    @include desktop-only {
+        &__logo{
+            justify-content: flex-start; 
+            & img{
+                margin-left: 40px;
+            }          
+        }
+    }
+    
+
 }
+
 
 .fa-arrow-left{
     font-size: 25px;
