@@ -73,32 +73,32 @@
             display: flex;
             background-color: white;
             border-radius: 15px;
+            // position: relative;
             @include btn-shadow;
-            padding-top: 12px;
-            padding-bottom: 12px;
             justify-content: space-between;
             align-items: flex-end;
             width: 90%;
+            height: 100%;
             margin-bottom: 20px;
             &__column-description{
-                margin-left: 12px;
-                width: 79%;
+                margin: 12px;
+                overflow: hidden;
+                white-space: nowrap;
                 &__heading{
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;
                 }
                 &__description{
                     text-overflow: ellipsis;
                     overflow: hidden;
-                    white-space: nowrap;
-
                 }
             }
             &__price{
                 font-weight: 700;
                 font-size: 1.2em;
-                margin-right: 12px;
+                margin: 12px 12px 12px 0px;
+                margin-left: auto;
+                align-content: end;
             }
         }
     }

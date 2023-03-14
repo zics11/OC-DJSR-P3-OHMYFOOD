@@ -395,13 +395,17 @@ p {
 }
 
 .description-card-restaurant {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 30px 15px 15px;
 }
 .description-card-restaurant__heart {
+  position: relative;
+  background-color: transparent;
   font-size: 30px;
+  z-index: 10;
 }
 
 .new:after {
@@ -502,31 +506,31 @@ p {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 3px 7px rgb(190, 190, 190);
-  padding-top: 12px;
-  padding-bottom: 12px;
   justify-content: space-between;
   align-items: flex-end;
   width: 90%;
+  height: 100%;
   margin-bottom: 20px;
 }
 .menu__stage__courses__column-description {
-  margin-left: 12px;
-  width: 79%;
+  margin: 12px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .menu__stage__courses__column-description__heading {
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 .menu__stage__courses__column-description__description {
   text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap;
 }
 .menu__stage__courses__price {
   font-weight: 700;
   font-size: 1.2em;
-  margin-right: 12px;
+  margin: 12px 12px 12px 0px;
+  margin-left: auto;
+  align-content: end;
 }
 @media screen and (min-width: 768px) {
   .menu {
@@ -593,6 +597,77 @@ p {
 .btn-command:hover {
   background: linear-gradient(#ff8de0, #9e67e0);
   box-shadow: 0px 3px 7px #a5a5a5;
+}
+
+@keyframes fill-heart {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.description-card-restaurant__heart:hover {
+  animation: fill-heart 500ms both reverse;
+  cursor: pointer;
+}
+.description-card-restaurant__heart:hover + .description-card-restaurant__heart--fill {
+  animation: fill-heart 1000ms 100ms both;
+}
+.description-card-restaurant__heart--fill {
+  position: absolute;
+  right: 30px;
+  bottom: 50% -20px;
+  background: linear-gradient(to top, #FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  z-index: 1;
+  opacity: 0;
+}
+
+@keyframes slide-select {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 66px;
+  }
+}
+@keyframes slide-select-reverse {
+  100% {
+    width: 0px;
+  }
+  0% {
+    width: 66px;
+  }
+}
+@keyframes rotate-icon {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+.menu__stage__courses:hover > .menu__stage__courses__select {
+  animation: slide-select 600ms forwards;
+}
+.menu__stage__courses:hover > .menu__stage__courses__select i {
+  animation: rotate-icon 600ms;
+}
+.menu__stage__courses__select {
+  display: flex;
+  background-color: #99E2D0;
+  width: 0px;
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */

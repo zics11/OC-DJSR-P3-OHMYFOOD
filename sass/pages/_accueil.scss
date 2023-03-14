@@ -223,12 +223,16 @@
 }
 
 .description-card-restaurant{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px 15px 15px;
     &__heart{
+        position: relative;
+        background-color: transparent;
         font-size: 30px;
+        z-index: 10;
     }
 }
 
