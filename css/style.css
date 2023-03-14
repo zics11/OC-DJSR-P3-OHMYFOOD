@@ -504,7 +504,6 @@ p {
   display: flex;
   background-color: white;
   border-radius: 15px;
-  position: relative;
   box-shadow: 0px 3px 7px rgb(190, 190, 190);
   justify-content: space-between;
   align-items: flex-end;
@@ -666,6 +665,7 @@ p {
   text-align: center;
   font-size: 24px;
   overflow: hidden;
+  animation: slide-select-reverse 600ms both;
 }
 
 /*# sourceMappingURL=style.css.map */
