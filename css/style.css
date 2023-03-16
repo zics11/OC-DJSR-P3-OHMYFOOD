@@ -237,6 +237,7 @@ p {
   .fonctionnement {
     max-width: 1440px;
     justify-content: center;
+    margin: auto;
     padding-left: 0px;
   }
   .fonctionnement__heading {
@@ -345,6 +346,7 @@ p {
 @media screen and (min-width: 992px) {
   .list-restaurants {
     flex-direction: row;
+    margin: auto;
     justify-content: space-evenly;
     max-width: 1440px;
     border-radius: 15px;
@@ -509,6 +511,8 @@ p {
   align-items: flex-end;
   width: 90%;
   margin-bottom: 20px;
+  overflow: hidden;
+  position: relative;
 }
 .menu__stage__courses__column-description {
   margin: 12px;
@@ -626,46 +630,60 @@ p {
   opacity: 0;
 }
 
-@keyframes slide-select {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 66px;
-  }
-}
-@keyframes slide-select-reverse {
-  100% {
-    width: 0px;
-  }
-  0% {
-    width: 66px;
-  }
-}
-@keyframes rotate-icon {
-  0% {
-    transform: rotateZ(0);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
 .menu__stage__courses:hover > .menu__stage__courses__select {
-  animation: slide-select 600ms forwards;
+  min-width: 66px;
 }
-.menu__stage__courses:hover > .menu__stage__courses__select i {
-  animation: rotate-icon 600ms;
+.menu__stage__courses:hover > i {
+  transform: translateX(-66px) rotateZ(360deg);
 }
 .menu__stage__courses__select {
+  display: flex;
   background-color: #99E2D0;
+  min-width: 0px;
   width: 0px;
   height: 100%;
-  border-radius: 0px 15px 15px 0px;
   color: white;
-  text-align: center;
   font-size: 24px;
   overflow: hidden;
-  animation: slide-select-reverse 600ms both;
+  justify-content: center;
+  align-items: center;
+  transition: min-width 500ms;
+}
+.menu__stage__courses i {
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 21px;
+  right: -45px;
+  font-size: 24px;
+  transform: translateX(0) rotateZ(0deg);
+  transition: transform 500ms;
+  color: white;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.menu__stage {
+  animation: appear 1000ms both;
+}
+.menu__stage--0 {
+  animation-delay: 0ms;
+}
+.menu__stage--1 {
+  animation-delay: 250ms;
+}
+.menu__stage--2 {
+  animation-delay: 500ms;
 }
 
 /*# sourceMappingURL=style.css.map */

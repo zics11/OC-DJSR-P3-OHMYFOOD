@@ -1,54 +1,32 @@
-@keyframes slide-select {
-    0%{
-        width: 0px;
-    }
-    100%{
-        width: 66px;
-    }
-    
-}
-
-@keyframes slide-select-reverse {
-    100%{
-        width: 0px;
-    }
-    0%{
-        width: 66px;
-    }
-    
-}
-
-
-@keyframes rotate-icon {
-    0%{
-        transform: rotateZ(0);
-    }
-    100%{
-        transform: rotateZ(360deg);
-    }
-    
-}
-
-
 .menu__stage__courses{
     &:hover > .menu__stage__courses__select{
-        animation: slide-select 600ms  forwards ;
+        min-width: 66px;
+    }    
+    &:hover >  i{
+        transform: translateX(-66px) rotateZ(360deg) ;
     }
-    &:hover > .menu__stage__courses__select i{
-        animation: rotate-icon 600ms ;
-    }
-
     &__select{
-        // display: flex;
+        display: flex;
         background-color: $colour-tetiary;
+        min-width: 0px;
         width: 0px;
         height: 100%;
-        border-radius: 0px 15px 15px 0px;
         color: white;
-        text-align: center;
         font-size: 24px;
         overflow: hidden;
-        animation: slide-select-reverse 600ms both ;
-
+        justify-content: center;
+        align-items: center;
+        transition: min-width  500ms;
+    }
+    & i {
+        position: absolute;
+        margin-top: auto;
+        margin-bottom: auto;
+        top: 21px ;
+        right: -45px;
+        font-size: 24px;
+        transform: translateX(0) rotateZ(0deg) ;
+        transition: transform  500ms;
+        color: white;
     }
 }

@@ -105,6 +105,7 @@
     @include desktop-only {
         max-width: 1440px;
         justify-content: center;
+        margin: auto;
         padding-left: 0px;
         &__heading{
             text-align: left;
@@ -174,6 +175,7 @@
     }
     @include desktop-only {
         flex-direction: row;
+        margin: auto;
         justify-content: space-evenly;
         max-width: 1440px;
         border-radius: 15px;

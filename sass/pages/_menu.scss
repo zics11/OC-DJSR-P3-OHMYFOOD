@@ -73,12 +73,13 @@
             display: flex;
             background-color: white;
             border-radius: 15px;
-            // position: relative;
             @include btn-shadow;
             justify-content: space-between;
             align-items: flex-end;
             width: 90%;
             margin-bottom: 20px;
+            overflow: hidden;
+            position: relative;
             &__column-description{
                 margin: 12px;
                 overflow: hidden;
