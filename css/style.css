@@ -7,7 +7,6 @@ body {
   box-sizing: border-box;
   background: white;
   width: 100%;
-  max-width: 1440;
 }
 
 body {
@@ -33,6 +32,11 @@ p {
   font-size: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .header {
   display: flex;
   justify-content: space-around;
@@ -55,7 +59,7 @@ p {
 .header__logo--menu {
   justify-content: space-between;
 }
-.header__logo--menu i {
+.header__logo--menu a {
   margin-left: 20px;
 }
 .header__logo--menu div {
@@ -63,7 +67,7 @@ p {
   margin-right: 20px;
 }
 @media screen and (min-width: 992px) {
-  .header__logo--menu i {
+  .header__logo--menu a {
     display: none;
   }
 }
@@ -217,7 +221,7 @@ p {
   padding-top: 50px;
   padding-bottom: 50px;
   flex-direction: column;
-  padding-left: 28px;
+  padding-left: 38px;
   gap: 25px;
   flex-wrap: wrap;
 }
@@ -575,6 +579,7 @@ p {
   .menu__stage {
     width: 30%;
     flex-direction: column;
+    justify-content: flex-start;
   }
   .menu__stage__courses {
     width: 100%;
@@ -622,7 +627,7 @@ p {
 .description-card-restaurant__heart--fill {
   position: absolute;
   right: 30px;
-  bottom: 50% -20px;
+  bottom: 21px;
   background: linear-gradient(to top, #FF79DA, #9356DC);
   -webkit-background-clip: text;
   -moz-background-clip: text;

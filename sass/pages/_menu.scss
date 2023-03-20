@@ -137,6 +137,7 @@
         &__stage{
             width: 30%;
             flex-direction: column;
+            justify-content:flex-start;
             &__courses{
                 width: 100%
             }
