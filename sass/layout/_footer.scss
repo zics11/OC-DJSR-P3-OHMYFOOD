@@ -1,24 +1,28 @@
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     background-color: rgb(53, 53, 53);
     padding: 20px;
     color: white;
     gap: 10px;
-    &__logo{
+
+    &__logo {
         font-family: "Shrikhand";
         font-weight: 400;
         font-size: 1.2em;
         margin-bottom: 10px;
     }
-    &__lien{
+
+    &__lien {
         color: white;
         text-decoration: none;
-        & i{
+
+        & i {
             margin-right: 15px;
             width: 10px;
         }
     }
+
     @include tablet-only {
         align-items: center;
     }

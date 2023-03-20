@@ -1,5 +1,6 @@
-.body-menu{
+.body-menu {
     background-color: $colour-explore-bg;
+
     @include tablet-only {
         background-color: white;
     }
@@ -9,6 +10,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
     @include desktop-only {
         padding-left: 40px;
         padding-right: 40px;
@@ -16,23 +18,22 @@
 }
 
 
-.img-menu{
+.img-menu {
     width: 100%;
     height: 320px;
     object-fit: cover;
     max-width: 1440px;
+
     @include desktop-only {
         border-radius: 40px;
         margin-top: 10px;
     }
-
 }
 
-.menu{
+.menu {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    // position: relative;
     background-color: $colour-explore-bg;
     padding-top: 40px;
     padding-bottom: 20px;
@@ -40,36 +41,42 @@
     bottom: 40px;
     width: 100%;
     max-width: 1440px;
-    &__heading{
+
+    &__heading {
         display: flex;
         justify-content: space-between;
         align-items: baseline;
         margin: auto;
         margin-bottom: 30px;
         width: 90%;
-        & i{
+
+        & i {
             font-size: 25px;
         }
     }
-    &__stage{
+
+    &__stage {
         display: flex;
         flex-direction: column;
         align-content: center;
         flex-wrap: wrap;
         width: 100%;
-        margin-bottom: 10px ;
-        &__heading{
+        margin-bottom: 10px;
+
+        &__heading {
             font-weight: 400;
             font-size: 20px;
             margin-bottom: 25px;
-            &--under{
+
+            &--under {
                 text-decoration: underline;
                 text-decoration-thickness: 4px;
                 text-decoration-color: $colour-tetiary;
                 text-underline-offset: 10px;
             }
         }
-        &__courses{
+
+        &__courses {
             display: flex;
             background-color: white;
             border-radius: 15px;
@@ -81,20 +88,24 @@
             margin-bottom: 20px;
             overflow: hidden;
             position: relative;
-            &__column-description{
+
+            &__column-description {
                 margin: 12px;
                 overflow: hidden;
                 white-space: nowrap;
-                &__heading{
+
+                &__heading {
                     text-overflow: ellipsis;
                     overflow: hidden;
                 }
-                &__description{
+
+                &__description {
                     text-overflow: ellipsis;
                     overflow: hidden;
                 }
             }
-            &__price{
+
+            &__price {
                 font-weight: 700;
                 font-size: 1.2em;
                 margin: 12px 12px 12px 0px;
@@ -103,27 +114,34 @@
             }
         }
     }
+
     @include tablet-only {
         border-radius: 40px 40px 0px 0px;
         padding-bottom: 60px;
         margin-bottom: -40px;
-        &__heading{
+
+        &__heading {
             width: 50%;
         }
-        &__stage{
+
+        &__stage {
             flex-direction: row;
             justify-content: space-evenly;
-            &__heading{
+
+            &__heading {
                 width: 94%;
             }
-            &__courses{
+
+            &__courses {
                 width: 29.5%;
-                &__column-description{
+
+                &__column-description {
                     width: 70%;
                 }
             }
         }
     }
+
     @include desktop-only {
         bottom: 0px;
         margin-top: 40px;
@@ -131,14 +149,17 @@
         justify-content: space-evenly;
         margin-bottom: 40px;
         padding-bottom: 40px;
-        &__heading{
+
+        &__heading {
             width: 95%;
         }
-        &__stage{
+
+        &__stage {
             width: 30%;
             flex-direction: column;
-            justify-content:flex-start;
-            &__courses{
+            justify-content: flex-start;
+
+            &__courses {
                 width: 100%
             }
 
@@ -146,7 +167,7 @@
     }
 }
 
-.btn-command{
+.btn-command {
     @include btn;
     margin: auto;
     margin-top: 20px;
