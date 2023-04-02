@@ -711,25 +711,17 @@ a {
   gap: 1rem;
   opacity: 0;
   cursor: wait;
-  animation: display-none 3s;
-}
-
-.spinner__bol {
-  content: "";
-  background: #9356DC;
-  width: 128px;
-  height: 64px;
-  border-radius: 0 0 100px 100px;
-  animation: move 0.5s linear 6 alternate;
+  animation: display-none 3000ms;
 }
 
 .spinner__square {
-  content: "";
-  background: #FF79DA;
-  width: 48px;
-  height: 48px;
+  padding-right: 3px;
+  vertical-align: middle;
+  font-size: 100px;
+  font-weight: 900;
+  color: #9356DC;
   transform: rotate(0deg);
-  animation: rotate 1500ms linear 2;
+  animation: rotate 1000ms linear 3;
 }
 
 @keyframes display-none {
@@ -737,7 +729,7 @@ a {
     opacity: 1;
     visibility: visible;
   }
-  90% {
+  95% {
     opacity: 1;
   }
   100% {
@@ -748,14 +740,6 @@ a {
 @keyframes rotate {
   100% {
     transform: rotate(360deg);
-  }
-}
-@keyframes move {
-  0% {
-    transform: rotate(10deg);
-  }
-  100% {
-    transform: rotate(-10deg);
   }
 }
 
